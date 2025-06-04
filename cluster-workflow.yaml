@@ -3,10 +3,10 @@ kind: ClusterWorkflowTemplate
 metadata:
   name: my-template
 spec:
-  entrypoint: hello
+  entrypoint: whalesay
   templates:
-  - name: hello
+  - name: whalesay
     container:
-      image: alpine:3.19
-      command: [sh, -c]
-      args: ["echo 'hello world' && uname -a"]
+      image: docker/whalesay
+      command: [cowsay]
+      args: ["hello world"]
