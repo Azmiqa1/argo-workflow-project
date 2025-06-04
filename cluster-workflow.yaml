@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ClusterWorkflowTemplate 
 metadata:
-  name: whalesay-template
+  name: my-template
 spec:
-  entrypoint: whalesay
+  entrypoint: hello
   templates:
-  - name: whalesay
+  - name: hello
     container:
-      image: docker/whalesay
-      command: [cowsay]
-      args: ["hello world"]
+      image: python:3.9-slim
+      command: ["python"]
+      args: ["-c", "print('hello world')"]
