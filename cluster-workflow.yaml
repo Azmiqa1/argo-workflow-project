@@ -3,10 +3,10 @@ kind: ClusterWorkflowTemplate
 metadata:
   name: my-template
 spec:
-  entrypoint: whalesay
+  entrypoint: test
   templates:
-  - name: whalesay
+  - name: test
     container:
-      image: docker/whalesay
-      command: [cowsay]
+      image: busybox:1.36
+      command: ["echo"]
       args: ["hello world"]
