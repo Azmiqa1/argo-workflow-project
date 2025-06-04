@@ -7,6 +7,6 @@ spec:
   templates:
   - name: hello
     container:
-      image: python:3.9-slim
-      command: ["python"]
-      args: ["-c", "print('hello world')"]
+      image: alpine:3.19
+      command: [sh, -c]
+      args: ["echo 'hello world' && uname -a"]
